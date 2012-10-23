@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <title>Google Maps JavaScript API v3 Example: Map Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style type="text/css">
+	html,body { 
+		height: 100%; 
+		background: rgba(146, 183, 251, 0.5); 
+		margin: 0; 
+		padding: 0; 
+	}
+	
+     #map_canvas {
+        margin: 0;
+        height: 100%;
+		width: 100%;
+		display: inline-block;
+      }
+	  
+	 .left-navigation {
+		background: rgba( 2,2,2, 0.2 );
+		width: 100%;
+		position: absolute;
+		z-index: 100001;
+		min-height: 0px;
+		right: 0;
+		bottom: 0;
+	 }
+	 
+	 .form {
+		display: inline-block;
+		margin: 0 2px;
+	 }
+	 
+	 .right-result label {
+		padding: 5px 10px;
+		color: #333;
+		clear: both;
+		display: block;
+		text-shadow: 0 -1px 0 #DEDEDE;
+		font-family: arial;
+		font-weight: bolder;
+	 }
+	 
+	 .right-result  input {
+		padding: 10px;
+		width: 90%;
+	 }
+	 
+	 .btn {
+		padding: 10px;
+		border: 1px solid #111;
+		color: #FEFEFE;
+		background: #333;
+		cursor: pointer;
+	}
+	
+	.ads{
+		color: #EEE;
+		padding: 20px;
+		height: 65px;
+		background: rgba( 0,0,0,0.5 );
+		display: inline-block;
+		width: 250px;
+		text-shadow: 0 1px 0 #111;
+	}
+	.right-result {
+		top: 30px;
+		right: 0;
+		height: 126px;
+		width: 290px;		
+		position: absolute;
+		background: rgba( 0,0,0,0.2 );
+		z-index: 100001;
+		padding: 0 20px;
+	}
+	.form ul {
+		margin: 0;
+		padding: 0;
+	}
+	.form ul li {
+		margin: 2px;
+		display: inline-block;
+		color: #FEFEFE;
+		text-shadow: 1px 1px 1px #111;
+		list-style: none;
+		background: rgba(123, 123, 124, 0.8);
+		padding: 10px;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-o-border-radius: 10px;
+		cursor: pointer;
+	}
+    </style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyA1ilEI3ITNCBsq5UNsb6o2vAhtdt0xF_U&sensor=false"></script>
+    <script src="map.js"></script>
+  </head>
+  <body>
+	<div class="left-navigation">
+		<div class="form">
+			<ul></ul>
+		</div>
+	</div>
+	<div class="right-result">
+			<label>Place Locatenator </label>
+			<input type="text" id="address" placeholder="Find Places" />
+			<button class="btn setLocation">Find</button>
+	</div>
+    <div id="map_canvas"></div>
+  </body>
+</html>
